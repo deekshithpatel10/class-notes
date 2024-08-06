@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sriracha&display=swap');
+
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: "Roboto Mono", sans-serif ;
+}
+
+h1 {
+   margin: 10px auto;
+   text-align: center;
+   color: red;
+   font-family: "Roboto Mono", sans-serif;
+}
+
+p {
+   margin: 10px 10px;
+   padding: 10px;
+   background-color: rgb(204, 206, 209);
+   border-radius: 10px;
+}
+
+p span {
+   display: block;
+   color: green;
+   font-weight: bold;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+}

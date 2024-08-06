@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Computer Architecture</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <h1>Computer Architecture</h1>
+   <hr>
+   <p>
+      <span>Opinion</span>
+      A computer, at its core, is an electric circuit that 
+      takes in only certain kind of inputs. It gives out well-defined
+      outputs for each of these inputs. 
+      The collection of all valid inputs of a particular circuit, and abstract 
+      details of its execution constitute the <strong>Instruction Set Architecture</strong>.
+   </p>
+
+   <p>
+      <span>Definition</span>
+      <strong>Instruction set:</strong> The vocabulary of commands understood by an architecture.
+   </p>
+
+   <p>
+      <span>Definition</span>
+      <strong>Stored-program concept:</strong> The idea that instructions and data of many types can be stored in
+      memory as numbers and thus be easy to change, leading to the
+      stored-program computer.
+   </p>
+
+   <p>
+      <span>Definition</span>
+      <strong>Doubleword:</strong>Another natural unit of access in a computer, 
+      usually a group of 64 bits; corresponds to the size of a register in the 
+      RISC-V architecture.<br><br>
+      <strong>Word:</strong>A natural unit of access in a computer, usually a group of 32 bits.
+   </p>
+
+   <p>
+      <span>Opinion</span>
+      The principle behind having just 32 registers is <em>Smaller is Faster.</em> 
+      Having 32 registers makes it easier to assign bits to denote registers in the instruction,
+      which sounds like a more plausible reason. 
+   </p>
+
+   <p>
+      <span>Note</span>
+      Registers in RISC-V architecture are denoted with <em>x</em> followed
+      the number of that register.
+   </p>
+
+   <p>
+      <span>Definition</span>
+      <strong>Data transfer instruction:</strong>A command that moves data between memory and registers.
+      <strong>address</strong>A value used to delineate the location of a specific data element
+      within a memory array.
+   </p>
+
+   <div class="instructions">
+      <span>Instructions</span>
+      <ol>Overview of instructions read till now:
+         <li>
+            <span>add rd, rs1, rs2</span>
+         </li>
+         <li>
+            <span>sub rd, rs1, rs2</span>
+         </li>
+         <li>
+            <span>ld r1, i(r2)</span>
+            Here, the sum of <span>r2</span> and <span>i</span> forms the memory
+            address. <span>ld</span> stands for <em>load doubleword</em>.
+            <span>r2</span> and <span>i</span> are called the <em>base register</em> 
+            and <em>offset</em>, respectively. 
+         </li>
+         <li>
+            <span>sd r1, i(r2)</span>
+            The <span>sd</span>, <em>store doubleword</em>, instruction is 
+            the counterpart to <em>load doubleword</em>.
+         </li>
+      
+      </ol>
+      
+
+   </div>
+
+   <div class="byte-addressing">
+      <span>Byte addressing</span>
+      <img src="assets/byte-addressing.png" alt="image depicting byte-addressing">
+      Since 8-bit bytes are useful in many programs, virtually all
+      architectures today address individual bytes.Therefore, the
+      address of a doubleword matches the address of one of the 8 bytes
+      within the doubleword, and addresses of sequential doublewords
+      differ by 8.
+      Therefore, the address of a doubleword matches the address of 
+      one of the 8 bytes within the doubleword, and addresses of sequential 
+      doublewords differ by 8.
+   </div>
+
+   <div class="endianess"></div>
+</body>
+</html>
