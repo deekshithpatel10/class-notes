@@ -31,3 +31,27 @@ img {
    display: block;
    max-width: 100%;
 }
+
+.instructions {
+   margin: 10px 10px;
+   padding: 10px;
+   background-color: rgb(216, 241, 165);
+   border-radius: 10px;
+}
+
+.instructions ol {
+   margin-left: 30px;
+}
+
+.instructions li {
+   margin-top: 10px;
+}
+
+.instructions code {
+   background-color: white;
+   font-size: 80%;
+   border-radius: 4px;
+   font-weight: bold;
+   color: red;
+
+}

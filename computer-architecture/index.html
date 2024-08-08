@@ -49,12 +49,14 @@
       <span>Note</span>
       Registers in RISC-V architecture are denoted with <em>x</em> followed
       the number of that register.
+      To keep things simple, all addresses and integers in these notes are considered
+      to be 64 bits long.
    </p>
 
    <p>
       <span>Definition</span>
-      <strong>Data transfer instruction:</strong>A command that moves data between memory and registers.
-      <strong>address</strong>A value used to delineate the location of a specific data element
+      <strong>Data transfer instruction:</strong> A command that moves data between memory and registers.<br/><br>
+      <strong>address:</strong> A value used to delineate the location of a specific data element
       within a memory array.
    </p>
 
@@ -62,22 +64,27 @@
       <span>Instructions</span>
       <ol>Overview of instructions read till now:
          <li>
-            <span>add rd, rs1, rs2</span>
+            <code>add rd, rs1, rs2</code><br>
          </li>
          <li>
-            <span>sub rd, rs1, rs2</span>
+            <code>sub rd, rs1, rs2</code><br>
          </li>
          <li>
-            <span>ld r1, i(r2)</span>
-            Here, the sum of <span>r2</span> and <span>i</span> forms the memory
-            address. <span>ld</span> stands for <em>load doubleword</em>.
-            <span>r2</span> and <span>i</span> are called the <em>base register</em> 
+            <code>ld r1, i(r2)</code><br>
+            Here, the sum of <code>r2</code> and <code>i</code> forms the memory
+            address. <code>ld</code> stands for <em>load doubleword</em>.
+            <code>r2</code> and <code>i</code> are called the <em>base register</em> 
             and <em>offset</em>, respectively. 
          </li>
          <li>
-            <span>sd r1, i(r2)</span>
-            The <span>sd</span>, <em>store doubleword</em>, instruction is 
+            <code>sd r1, i(r2)</code><br>
+            The <code>sd</code>, <em>store doubleword</em>, instruction is 
             the counterpart to <em>load doubleword</em>.
+         </li>
+         <li>
+            <code>addi rd, rs, i</code><br>
+            This instruction is in alingment with the idea of making <strong>common case fast</strong>.
+            Also, there is no <code>subi</code> since <code>i</code> can be any integer.
          </li>
       
       </ol>
@@ -98,6 +105,38 @@
       doublewords differ by 8.
    </div>
 
-   <div class="endianess"></div>
+   <div class="endianess">
+      <span>Endianess</span>
+      Finish this from page 178.
+   </div>
+
+   <p>
+      <span>Info</span>
+      The compiler tries to keep the most frequently used variables in 
+      registers and places the rest in memory, using loads and stores 
+      to move variables between registers and memory. The process of putting 
+      less frequently used variables (or those needed later) into memory 
+      is called <em>spilling</em> registers.<br/>
+      A RISC-V arithmetic instruction can read two registers, operate on 
+      them, and write the result. A RISC-V data transfer instruction only 
+      reads one operand or writes one operand, without operating on it.
+   </p>
+
+   <p>
+      <span>Info</span>
+      Zero has a dedicated register, x0.
+   </p>
+
+   <div class="numbering-system">
+      <span>Signed and Unsigned numbering</span>
+      The bits in a <em>doubleword</em> are numbered corresponding to the power
+      of the base for that bit.<br>
+      In a doubleword, the <strong>most significant bit</strong> and <strong>least significant bit</strong>
+      refer to bit number <code>63</code> and <code>0</code>, respectively. <br>
+      
+
+   </div>
+
+
 </body>
 </html>
