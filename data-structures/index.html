@@ -52,6 +52,46 @@ int main() {
    </pre>
 
    <div class="description">
+      <span>Insertion Sort</span>
+      A loop invariant can be used to prove the validity of the 
+      insertion sort algorithm.
+      <ol>
+         <li>
+            <strong>Intialization: </strong> Prior to the first iteration, the 
+            sub-array has just one element, and is sorted.
+         </li>
+         <li>
+            <strong>Maintenance: </strong> After every iteration, the loop places
+            the element <span class="code">A[i]</span> in its sorted position in 
+            the subarray <span class="code">A[0:i]</span>. 
+            Hence, after every iteration, <span class="code">i</span> is incremented 
+            by one, and the subarray <span class="code">A[0:i]</span> is sorted. 
+         </li>
+         <li>
+            <strong>Termination: </strong>Since <span class="code">i</span> keeps 
+            getting incremented, it eventually equals <span class="code">num_of_elements</span> 
+            and the loop condition evaluated to false. 
+            After the <span class="code">(n-1)th</span> iteration, the subarray 
+            <span class="code">A[0:n-1]</span>, which is the entire array, is sorted.
+         </li>
+      </ol>
+   </div>
+
+   <div class="ideas">
+      <ol>
+         To analyse an algorithm, the following two factors are taken into account:
+         <li>
+            <strong>Input size: </strong> The notion of input size depends on the
+            problem being studied. It can be <em>the number of items</em>, <em>length of string</em>
+            or <em>the number of nodes and edges in a graph</em>.
+         </li>
+
+         <li>
+            <strong>Running time: </strong> The running time of an algorithm 
+            on a particular input is the number of instructions and data 
+            accesses executed.
+         </li>
+      </ol>
 
    </div>
 
