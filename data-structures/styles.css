@@ -23,10 +23,12 @@ img {
    max-width: 100%;
 }
 
-pre.prettyprint {
-   font-size: 140%;
+html pre.prettyprint {
+   font-size: 120%;
    overflow: auto;
    max-width: 100%;
-   margin-left: 20px;
-   margin-right: 20px;
+   margin-left: 10px;
+   margin-right: 10px;
+   border-radius: 10px;
+   border: 2px solid black;
 }
