@@ -23,8 +23,8 @@ img {
    max-width: 100%;
 }
 
-pre {
-   font-size: 60%;
+pre.prettyprint {
+   font-size: 80%;
    overflow: auto;
    max-width: 100%;
    margin-left: 20px;
