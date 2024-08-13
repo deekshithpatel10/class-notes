@@ -5,21 +5,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Data Structures</title>
    <link rel="stylesheet" href="styles.css">
+   <script type="text/javascript" id="MathJax-script" async
+   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+   </script>
 </head>
 <body>
    <h1>Data Strucutres and Applications</h1>
    <hr>
 
-   <details>
-      <summary>
-         Enla samachara.
-      </summary>
-      <p>
-         Falling 
-      </p>
-   </details>
-
    <pre class="prettyprint">
+//insertion sort
 #include &lt;stdio.h&gt;
 
 int main() {
@@ -90,10 +85,100 @@ int main() {
             <strong>Running time: </strong> The running time of an algorithm 
             on a particular input is the number of instructions and data 
             accesses executed.
+
+            The running time of an algorithm on an input size of \(n\) is denoted
+            by \(T(n)\).
          </li>
       </ol>
 
    </div>
+
+   <div class="description">
+      <span>Worst case analysis</span>
+      Majority of the times, we concentrate on just the worst case analysis.
+      <ol>
+         <li>
+            The worst-case running time of an algorithm gives an upper bound on 
+            the running time for \(any\) input.
+         </li>
+         <li>
+            For some algorithms, the worst case occurs fairly often.
+         </li>
+         <li>
+            The "average case" is often roughly as bad as the worst case.
+         </li>
+      </ol>
+   </div>
+
+   <div class="ideas">
+      It is the rate of growth, or <strong>order of growth</strong>, of the running time that really 
+      interests us. We therefore consider only the leading term of a formula (e.g., \(an^{2}\) ),
+      since the lower-order terms are relatively insignificant for large values of \(n\). 
+      We also ignore the leading term’s constant coefûcient, since constant factors are 
+      less significant than the rate of growth in determining computational efficiency 
+      for large inputs.
+   </div>
+
+   <pre class="prettyprint">
+//selection sort
+#include &lt;stdio.h&gt;
+
+int main() {
+   int num_of_elements = 0;
+
+   scanf("%d", &num_of_elements);
+
+   int array[num_of_elements];
+
+   for(int i = 0; i < num_of_elements; i++) {
+      scanf("%d", &array[i]);
+   }
+
+   //array is ready
+
+   for(int i = 0; i < (num_of_elements - 1) ; i++) {
+      int smallest = array[i];
+      int index = i;
+
+      //find smallest number
+      for(int j = i; j < num_of_elements; j++) {
+         if(array[j] < smallest) {
+            smallest = array[j];
+            index = j;
+         }
+      }
+
+      //exchange numbers
+      int temp = array[i];
+      array[i] = smallest;
+      array[index] = temp;
+   }
+
+   for(int i = 0; i < num_of_elements; i++) {
+      printf("%d ", array[i]);
+   }
+
+   return 0;
+}
+   </pre>
+
+   <div class="question">
+      <details>
+         <summary>
+            Analyse the running time of <em>selection sort</em>. What loop invariant 
+            does this algorithm maintain?
+         </summary>
+         <p>
+            \(n^2\), After every <span class="code">ith</span> iteration, the 
+            first <span class="code">i</span> elements in the array are the smallest
+            in the whole array <em>and</em> are sorted. 
+         </p>
+      </details>
+   </div>
+
+
+
+
 
    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
