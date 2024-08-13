@@ -7,6 +7,10 @@
    font-family: "Roboto Mono", sans-serif ;
 }
 
+body {
+   padding-bottom: 15px;
+}
+
 h1 {
    margin: 10px auto;
    text-align: center;
@@ -24,11 +28,63 @@ img {
 }
 
 html pre.prettyprint {
-   font-size: 120%;
+   font-size: 110%;
    overflow: auto;
    max-width: 100%;
    margin-left: 10px;
    margin-right: 10px;
    border-radius: 10px;
    border: 2px solid black;
+   margin: 15px 10px 0px 10px;
+}
+
+.description {
+   margin: 15px 10px 0px 10px;
+   background-color: rgb(208, 246, 246);
+   padding: 8px;
+   border: 2px solid gray;
+   border-radius: 10px;
+
+}
+
+ol {
+   margin-left: 30px;
+}
+
+div span {
+   display: block;
+   font-weight: bold;
+   font-size: 120%;
+   text-decoration: underline;
+   color:navy;
+   margin-bottom: 5px;
+}
+
+span.code {
+   display: inline;
+   color: red;
+   font-size: 90%;
+   background-color: white;
+   padding: 0.15px 3px;
+   border-radius: 2px;
+   text-decoration: none;
+}
+
+.ideas {
+   margin: 15px 10px 0px 10px;
+   background-color:rgb(203, 238, 168);
+   padding: 8px;
+   border: 2px solid gray;
+   border-radius: 10px;
+}
+
+.idea-heading {
+   color: green;
+}
+
+.question {
+   margin: 15px 10px 0px 10px;
+   border: 2px solid rgb(149, 218, 241);
+   border-radius: 10px;
+   padding: 6px;
 }
