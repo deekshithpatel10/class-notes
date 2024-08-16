@@ -167,8 +167,16 @@ int main() {
    <div class="question">
       <details>
          <summary>
-            Analyse the running time of <em>selection sort</em>. What loop invariant 
-            does this algorithm maintain?
+            <ol>
+               <li>
+                  Analyse the running time of <em>selection sort</em>. What loop invariant
+                  does this algorithm maintain?
+               </li>
+               <li>
+                  How would you modify any sorting algorithm to have a good best-case running
+                  time?
+               </li>
+            </ol>
          </summary>
          <p>
             \(n^2\), After every <span class="code">ith</span> iteration, the 
@@ -176,6 +184,25 @@ int main() {
             in the whole array <em>and</em> are sorted. 
          </p>
       </details>
+   </div>
+
+   <div class="description">
+      <span>Divide and Conquer</span>
+      In the divide-and-conquer method, if the problem is small enough - the <strong>base
+      case</strong> - you just solve it directly without recursing. Otherwise - the <strong>recursive case</strong> - 
+      you perform three characteristic steps:
+      <ol>
+         <li>
+            <strong>Divide</strong> the problem into one or more subproblems that are smaller instances of the
+            same problem.
+         </li>
+         <li>
+            <strong>Conquer</strong> the subproblems by solving them recursively.
+         </li>
+         <li>
+            <strong>Combine</strong> the subproblem solutions to form a solution to the original problem.
+         </li>
+      </ol>
    </div>
 
 
